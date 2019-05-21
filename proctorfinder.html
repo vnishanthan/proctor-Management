@@ -1,0 +1,156 @@
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+function showUser(str) {
+    //var str = $('#sub1').val();
+    if (str == "") {
+        document.getElementById("txtHint1").innerHTML = "";
+        return;
+    } else {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint1").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","dispstudent.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+<script>
+function dispUser(str) {
+    //var str = $('#sub1').val();
+    if (str == "") {
+        document.getElementById("txtHint2").innerHTML = "";
+        return;
+    } else {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint2").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","academicreco.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+<script>
+function dispUser1(str) {
+    //var str = $('#sub1').val();
+    if (str == "") {
+        document.getElementById("txtHint3").innerHTML = "";
+        return;
+    } else {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint3").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","achievreco.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+<script>
+function dispUser2(str) {
+    //var str = $('#sub1').val();
+    if (str == "") {
+        document.getElementById("txtHint4").innerHTML = "";
+        return;
+    } else {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint4").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","parentreco.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+</head>
+<body>
+  <div class="jumbotron">
+  <center><h1>STUDENT LIST </h1><center>
+  </div>
+
+<div class="container">
+  <a href="index.php">Home </a>
+    <form >
+    <!--<select name="users" onchange="showUser(this.value)">
+      <option value="">Choose Proctor Id:</option>
+      <option value="M4">M4</option>
+      <option value="JAVA">JAVA</option>
+
+      </select>-->
+      Enter Proctor ID
+      <input name="pid" type="text" required>
+      <button name="sub1" type="button" class="btn btn-primary" onclick="showUser(this.form.pid.value)">submit</button>
+    </form>
+  </div>
+  <div class="container" id="txtHint1"><b>Student info will be listed here...</b></div>
+
+  <br><br><br>
+  <div class="container"><p><b>View Student record</b></p>
+    <form >
+    Student ID<input name="sid" type="text" required>
+    <button name="sub2" type="button" class="btn btn-primary" onclick="dispUser(this.form.sid.value)">submit</button>
+    <button name="sub3" type="button" class="btn btn-primary" onclick="dispUser1(this.form.sid.value)">ACHIEVEMENTS</button>
+    <button name="sub4" type="button" class="btn btn-primary" onclick="dispUser2(this.form.sid.value)">PARENT INFO</button>
+
+    </form >
+  </div>
+  <div class="container" id="txtHint2"><b>Academic info will be listed here...</b></div>
+  <br><br>
+  <br>
+  <div class="container" id="txtHint3"><b>Achievements info will be listed here...</b></div>
+<br><br><br>
+
+<div class="container" id="txtHint4"><b>Parents info will be listed here...</b></div>
+<br><br><br>
+
+
+
+
+
+</body>
+</html>

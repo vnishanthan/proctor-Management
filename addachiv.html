@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body <body style="background-image:url('bg.png');">>
+<div class="container">
+  <a href="index.php">Home </a>
+  <h1>Enter The Achievements Detail below </h1>
+
+    <form action = "addachiv.php" method = "POST">
+      <table cellspacing="10px" cellpadding="10%"; align="left">
+          <tr>
+            <td> Student id: </td>
+            <td><input type = "text" name = "sid" required/></td>
+          </tr>
+
+        <tr>
+        <td>type: </td>
+        <td><input type = "text" name = "type" required/></td>
+      </tr>
+        <tr>
+          <td>  Name: </td>
+          <td><input type = "text" name = "name" required /></td>
+        </tr>
+
+          <tr>
+          <td>  Place: </td>
+          <td><input type = "text" name = "place" required /></td>
+          </tr>
+
+          <tr>
+          <td>sem: </td>
+          <td><input type = "text" name = "sem" required /></td>
+        </tr>
+          <tr>
+          <td>date: </td>
+          <td><input type = "text" name = "date" required /></td>
+        </tr>
+          <tr>
+        <td><button name="sub2" type="submit" class="btn btn-primary">submit</button></td>
+      </tr>
+        <table>
+      </form>
+
+</div>
+</body>
+</html>

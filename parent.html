@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body style="background-image:url('bg.png');">
+<div class="container">
+
+  <h1>Enter The Parent Detail below </h1>
+  <a href="index.php">Home </a>
+  <div class="container">
+    <form action = "parent.php" method = "POST">
+
+      <table cellspacing="10px" cellpadding="10%"; align="left">
+          <tr>
+            <td> Student id: </td>
+            <td><input type = "text" name = "sid" required/></td>
+          </tr>
+
+          <tr>
+            <td> Name: </td>
+            <td><input type = "text" name = "name" required/></td>
+          </tr>
+
+          <tr>
+            <td> phno: </td>
+            <td><input type = "text" name = "phno" required/></td>
+          </tr>
+
+          <tr>
+            <td> Email: </td>
+            <td><input type = "email" name = "email" required/></td>
+          </tr>
+
+          <tr>
+            <td> city: </td>
+            <td><input type = "text" name = "city" required/></td>
+          </tr>
+          <tr>
+            <td><button name="sub2" type="submit" class="btn btn-primary">submit</button></td>
+          </tr>
+        </table>
+
+      </form>
+    </div>
+</div>
+</body>
+</html>
